@@ -1,0 +1,112 @@
+body{
+  margin:0;
+  font-family:Georgia, serif;
+  background:#f5e6f0;
+  overflow:hidden;
+}
+
+/* center scene */
+.scene{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* scrapbook board */
+.board{
+  width:420px;
+  height:520px;
+  background:#fff7f8;
+  box-shadow:0 20px 50px rgba(0,0,0,0.2);
+  padding:30px;
+  position:relative;
+}
+
+/* title */
+.title{
+  text-align:center;
+  font-weight:normal;
+}
+
+/* hints scattered */
+.hint{
+  position:absolute;
+  background:#fff;
+  padding:8px 12px;
+  transform:rotate(-5deg);
+  box-shadow:3px 3px 8px rgba(143, 124, 129, 0.2);
+  font-size:14px;
+}
+
+.hint1{ top:80px; left:-20px;}
+.hint2{ top:200px; right:-25px; transform:rotate(7deg);}
+.hint3{ bottom:120px; left:30px; transform:rotate(-10deg);}
+
+/* password area */
+.password-box{
+  position:absolute;
+  bottom:60px;
+  width:100%;
+  text-align:center;
+}
+
+input{
+  padding:10px;
+  border:none;
+  border-bottom:2px solid #796e72;
+  background:transparent;
+  font-size:16px;
+}
+
+button{
+  margin-left:10px;
+  padding:10px 15px;
+  border:none;
+  background:#d4abb6;
+  color:white;
+  cursor:pointer;
+}
+
+/* SUCCESS SCREEN */
+.success{
+  position:fixed;
+  inset:0;
+  background:rgba(75, 70, 72, 0.7);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  pointer-events:none;
+  transition:0.6s;
+}
+
+.success.show{
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* big message */
+.message{
+  color:white;
+  font-size:32px;
+  text-align:center;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+  from{ text-shadow:0 0 10px white;}
+  to{ text-shadow:0 0 30px pink;}
+}
+
+/* wrong animation */
+.shake{
+  animation:shake 0.4s;
+}
+
+@keyframes shake{
+  0%{transform:translateX(0);}
+  25%{transform:translateX(-5px);}
+  50%{transform:translateX(5px);}
+  75%{transform:translateX(-5px);}
+}

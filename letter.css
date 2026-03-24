@@ -1,0 +1,126 @@
+body{
+  margin:0;
+  background:#efdcdf;
+  font-family: "Georgia", serif;
+}
+
+/* center */
+.scene{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+
+/* paper */
+.paper{
+  width:min(85vw,600px);
+  background:#fff2fc;
+  padding:60px 50px;
+  line-height:1.8;
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
+  position:relative;
+
+  background-image:
+    url("img/paper-texture.png");
+  background-size:cover;
+}
+
+/* handwriting feel */
+.paper p{
+  font-size:18px;
+}
+
+/* signature */
+.signature{
+  margin-top:40px;
+  text-align:right;
+  font-style:italic;
+}
+
+/* decorations */
+.tape{
+  position:absolute;
+  top:120px;
+  width:120px;
+  height:25px;
+  background:#e8bdcd;
+  opacity:.7;
+  transform:rotate(-8deg);
+}
+
+.flower{
+  position:absolute;
+  right:15%;
+  bottom:18%;
+  width:120px;
+  transform:rotate(12deg);
+}
+
+/* back button */
+.back{
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  padding:10px 16px;
+}
+
+.paper{
+  font-family:'Dancing Script', cursive;
+}
+.paper{
+  animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-8px);}
+  100%{transform:translateY(0);}
+}
+
+/*petal*/
+
+/* container */
+#petals-container{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:1;
+}
+
+/* petal */
+.petal{
+  position:absolute;
+  top:-50px;
+  width:30px;
+  opacity:0.9;
+  animation: fall linear forwards;
+}
+
+/* falling animation */
+@keyframes fall{
+
+  0%{
+    transform:
+      translateY(0)
+      translateX(0)
+      rotate(0deg);
+  }
+
+  50%{
+    transform:
+      translateY(50vh)
+      translateX(40px)
+      rotate(180deg);
+  }
+
+  100%{
+    transform:
+      translateY(110vh)
+      translateX(-40px)
+      rotate(360deg);
+      opacity:0;
+  }
+}

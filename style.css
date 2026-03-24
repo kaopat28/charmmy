@@ -1,0 +1,147 @@
+body{
+    margin:0;
+    background:#f6efe7;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    font-family:Georgia, serif;
+}
+
+/* ฉาก */
+.scene{
+    position: relative;
+    top: 65px;
+    width:450px;
+    height:auto;
+}
+
+/* รูป */
+.photo{
+    width:110px;
+    position:absolute;
+    left:50%;
+    bottom:80px;
+    transform:translateX(-50%) translateY(60px);
+    opacity:0;
+    transition:all 0.8s ease;
+
+    transform: 
+        translateX(-50%)
+        translateY(80px)
+        rotate(0deg)
+        scale(0.8);
+}
+
+/* ซองล่าง */
+.envelope-base{
+    position:absolute;
+    width:100%;
+    left:0;
+    bottom:0;
+    transition:opacity 0.5s ease;
+}
+
+/* เริ่มต้น */
+.opened{
+    opacity:0;
+}
+
+/* หลังเปิด */
+.open .closed{
+    opacity:0;
+}
+
+.open .opened{
+    opacity:1;
+}
+
+/* ฝาซอง */
+.flap{
+    position: absolute;
+
+    width:100%;
+    left:0;
+    bottom:55px;
+    transform-origin:top center;
+    transition:transform 0.8s ease;
+    z-index:5;
+}
+
+.open .flap{
+    transform:rotateX(180deg);
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* ตำแหน่ง */
+.p1{ margin-left:-120px; }
+.p2{ margin-left:0px; }
+.p3{ margin-left:120px; }
+
+/* ⭐ รูปเด้ง */
+.open .photo{
+    opacity:1;
+    transform:translateX(-50%) translateY(-130px);
+    z-index: 6;
+}
+
+.open .p1{ 
+    opacity: 1;
+    transform: 
+        translateX(-50%)
+        translateY(-150px)
+        rotate(-12deg)
+        scale(1);
+    transition-delay:0.4s; }
+.open .p2{ 
+    opacity: 1;
+    transform: 
+        translateX(-50%)
+        translateY(-170px)
+        rotate(6deg)
+        scale(1);
+    transition-delay:0.7s; }
+.open .p3{ 
+    opacity: 1;
+    transform: 
+        translateX(-50%)
+        translateY(-140px)
+        rotate(14deg)
+        scale(1);
+    transition-delay:1s; }
+
+.photo{
+    box-shadow: 0 10px 20px rgba(0, 0, 0,0.15);
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.photo:hover {
+    transform: scale(1.1) rotate(3dg);
+}
+/* ปุ่ม */
+.open-btn{
+    margin-top:50px;
+    top: 110px;
+    padding:12px 25px;
+    border:none;
+    background:#d8a7b1;
+    color:white;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+.paper{
+    background:url("paper.jpg");
+    padding:60px;
+    width:600px;
+    margin:auto;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+/*เกม*/
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="scene">
+
+    <!-- รูปที่อยู่ในซอง -->
+    <a href="letter.html"><img src="immage/pair1.jpg" class="photo p1"></a>
+    <a href="memories.html"><img src="immage/pair2.jpg" class="photo p2"></a>
+    <a href="game.html"><img src="immage/pair3.jpg" class="photo p3"></a>
+
+    <!-- ตัวซอง -->
+    <div class="scene">
+
+    <!-- ซองล่าง (2 สถานะ) -->
+    <img src="immage/bottomletter.PNG"
+         class="envelope-base closed">
+
+    <img src="immage/bottomletter2.PNG"
+         class="envelope-base opened">
+
+    <!-- ฝาซอง -->
+    <img src="immage/topletter.PNG"
+         class="flap">
+
+
+</div>
+
+<button class="open-btn" onclick="openEnvelope()">
+    Open Letter 💌
+</button>>
+
+<script>
+function openEnvelope(){
+    document.body.classList.add("open");
+}
+</script>
+
+</body>
+</html>
