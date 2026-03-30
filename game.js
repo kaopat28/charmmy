@@ -1,13 +1,22 @@
-const correctPassword = "memory";
-
 function checkPassword(){
 
-  const input = document.getElementById("password");
-  const success = document.getElementById("success");
+  const input = document
+    .getElementById("password")
+    .value
+    .toLowerCase()
+    .trim();
 
-  if(input.value.toLowerCase() === correctPassword){
+  // ⭐ ใส่รหัสที่ถูกทั้งหมดตรงนี้
+  const correctPasswords = [
+    "love you",
+    "love",
+    "I love you",
+    "loveu",
+    "ruk"
+  ];
 
-      success.classList.add("show");
+  if(correctPasswords.includes(input)){
+    success.classList.add("show");
 
   }else{
 
@@ -21,6 +30,7 @@ function checkPassword(){
       input.placeholder="try again...";
   }
 }
+
 
 function goBack(){
   history.back();

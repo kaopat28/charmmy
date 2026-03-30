@@ -4,6 +4,52 @@ body{
   background:#f5e6f0;
   overflow:hidden;
 }
+.decorations{
+  position:absolute;
+  inset:0;
+  pointer-events:none; /* เกมกดได้ปกติ */
+}
+
+.board{
+  position: relative;
+  background: #fff6f8;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* layer container */
+.decorations{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+
+/* photo style */
+.photo{
+  position:absolute;
+  width:120px;
+  border:8px solid white;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  border-radius:6px;
+}
+
+/* random placement (memory board look) */
+.p1{ top:40px; left:60px; transform:rotate(-8deg); }
+.p2{ top:90px; right:80px; transform:rotate(6deg); }
+.p3{ bottom:140px; left:90px; transform:rotate(4deg); }
+.p4{ bottom:80px; right:90px; transform:rotate(-5deg); }
+
+
+/* stickers */
+.sticker{
+  position:absolute;
+  font-size:28px;
+}
+
+.heart{ top:40px; right:120px; }
+.star{ bottom:80px; left:150px; }
+.flower{ top:250px; right:80px; }
 
 /* center scene */
 .scene{
@@ -33,11 +79,18 @@ body{
 .hint{
   position:absolute;
   background:#fff;
-  padding:8px 12px;
+ 
   transform:rotate(-5deg);
   box-shadow:3px 3px 8px rgba(143, 124, 129, 0.2);
   font-size:14px;
+
+  background:#fff;
+  padding:10px 15px;
+  border-radius:8px;
+  box-shadow:0 3px 8px rgba(0,0,0,0.15);
+  
 }
+
 
 .hint1{ top:80px; left:-20px;}
 .hint2{ top:200px; right:-25px; transform:rotate(7deg);}
@@ -109,4 +162,16 @@ button{
   25%{transform:translateX(-5px);}
   50%{transform:translateX(5px);}
   75%{transform:translateX(-5px);}
+}
+
+.board::before{
+  content:"";
+  position:absolute;
+  width:80px;
+  height:80px;
+  background:pink;
+  opacity:0.2;
+  border-radius:50%;
+  top:50px;
+  left:250px;
 }

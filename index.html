@@ -1,17 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
 <meta charset="UTF-8">
+<title>Our Garden</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="center">
+<body>
 
-<img src="immage/charmmy1.png" class="main-photo"
-onclick="goEnvelope()">
+<div class="garden-container">
+
+    <!-- ของตกแต่ง -->
+    <img src="immage/pinkflower1.png" class="deco d1">
+    <img src="immage/pink lily .png" class="deco d2">
+
+    <h2 class="subtitle">A little garden of memories</h2>
+    <h1 class="title">For You </h1>
+
+    <p class="desc">
+        พร้อมรึยังงง กดรูปๆๆ
+    </p>
+
+    <!-- รูปกดไปหน้าจดหมาย -->
+    <img src="immage/charmmy1.png"
+         class="letter-entry"
+         onclick="goLetter()">
+
+</div>
 
 <script>
-function goEnvelope(){
+function goLetter(){
     window.location.href="menu.html";
 }
 </script>
